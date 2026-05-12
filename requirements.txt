@@ -1,0 +1,34 @@
+# ============================================================
+# Self-Healing RAG Pipeline — Verified Production Stack
+# ============================================================
+
+# Orchestration & Graph Runtime
+# Using 0.2.x for advanced state management features
+langgraph==0.2.39
+
+# LLM & Embedding Providers
+langchain-google-genai==2.0.0
+
+# Vector Store Integration
+pinecone-client==5.0.1
+langchain-pinecone==0.2.0
+
+# Observability & Tracing
+langfuse==2.53.0
+
+# Evaluation Framework
+ragas==0.2.4
+
+# Configuration & Data Validation
+# Separating settings to prevent Pydantic v2 migration issues[cite: 3, 4]
+pydantic==2.9.2
+pydantic-settings==2.6.0
+python-dotenv==1.0.1
+
+# API & Demo UI
+# Standardized for Railway's containerized environment
+fastapi==0.115.0
+uvicorn[standard]==0.31.1
+streamlit==1.39.0
+httpx==0.27.2
+pandas==2.2.3
